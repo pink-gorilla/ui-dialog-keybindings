@@ -1,0 +1,7 @@
+{:name "ui-keybindings"
+ ; build
+ :lazy-sci false
+ :cljs-namespace [frontend.keybindings]
+ :cljs-ns-bindings {'frontend.keybindings 
+                    {'keybindings-init!  frontend.keybindings/keybindings-init! 
+                     'palette-show  frontend.keybindings/palette-show}}}
