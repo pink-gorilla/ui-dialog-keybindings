@@ -58,12 +58,14 @@
        (when (:show? @modal)
          [modal-panel @modal])])))
 
-(defn dialog-show [child size close]
-  (dispatch [:modal/open child size close]))
+(defn dialog-show
+  ([ui]
+   (dispatch [:modal/open ui :small]))
+  ([ui size]
+   (dispatch [:modal/open ui size]))
+  ([ui size close]
+   (dispatch [:modal/open ui size close])))
 
 (defn dialog-close []
   (dispatch [:modal/close]))
-
-
-
 

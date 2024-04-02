@@ -1,0 +1,6 @@
+{:name "ui-notification"
+ ; build
+ :lazy false
+ :cljs-namespace [frontend.notification]
+ :cljs-ns-bindings {'frontend.notification {'show-notification frontend.notification/show-notification
+                                            'notification-container frontend.notification/notification-container}}}

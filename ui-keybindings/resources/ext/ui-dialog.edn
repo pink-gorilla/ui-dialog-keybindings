@@ -1,6 +1,6 @@
 {:name "ui-dialog"
  ; build
- :lazy-sci false
+ :lazy false
  :cljs-namespace [frontend.dialog]
  :cljs-ns-bindings {'frontend.dialog {'modal-container frontend.dialog/modal-container
                                       'dialog-show frontend.dialog/dialog-show

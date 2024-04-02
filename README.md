@@ -4,3 +4,4 @@
 
 - modal dialog
 - keybindings (with dialog)
+- notification

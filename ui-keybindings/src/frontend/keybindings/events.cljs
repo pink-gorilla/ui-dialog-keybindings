@@ -12,7 +12,6 @@
    :visible-items nil
    :query        ""})
 
-
 (reg-event-db
  :keybindings/init
  (fn [db [_ keybindings-config]]
@@ -22,8 +21,7 @@
      (assoc-in db
                [:keybindings]
                {:search clean-search
-                :config keybindings-config
-                }))))
+                :config keybindings-config}))))
 
 ; dialog visibility
 

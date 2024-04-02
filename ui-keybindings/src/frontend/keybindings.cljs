@@ -4,14 +4,11 @@
    ; side effects
    [frontend.keybindings.component]
    [frontend.keybindings.events]
-   [frontend.keybindings.init]
-   
-   ))
-
+   [frontend.keybindings.init]))
 
 (defn keybindings-init! [keybindings-config]
   (rf/dispatch [:keybindings/init keybindings-config]))
 
 (defn palette-show []
-   (rf/dispatch [:palette/show]))
+  (rf/dispatch [:palette/show]))
 
