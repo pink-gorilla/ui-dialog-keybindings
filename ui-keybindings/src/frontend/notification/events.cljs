@@ -2,7 +2,7 @@
   (:require
    [taoensso.timbre :refer-macros [error]]
    [re-frame.core :as rf :include-macros true :refer [dispatch]]
-   [frontend.type :refer [notification]]))
+   [frontend.notification.type :refer [notification]]))
 
 ;; stolen from:
 ;; https://github.com/baskeboler/cljs-karaoke-client/blob/master/src/main/cljs_karaoke/events/notifications.cljs

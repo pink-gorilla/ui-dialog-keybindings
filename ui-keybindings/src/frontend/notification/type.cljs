@@ -1,4 +1,4 @@
-(ns notification.type)
+(ns frontend.notification.type)
 
 
 (def notification-types #{:info :warning :error})
