@@ -27,7 +27,7 @@
   with `unbind!`.
   `spec` format is emacs-like strings a-la \"ctrl-c k\", \"meta-shift-k\", etc."
   [{:keys [kb handler scope] :as keybinding}]
-  (debugf "binding %s to %s" kb handler)
+  ;(debugf "binding %s to %s" kb handler)
   #_(swap! BINDINGS
            key/bind kb (id) (partial reframe-handler keybinding))
   (key/bind! kb (id) (partial reframe-handler keybinding)))
