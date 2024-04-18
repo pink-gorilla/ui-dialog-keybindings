@@ -1,7 +1,8 @@
-{:name "ui-keybindings"
+{:name "keybindings" ; module name corresponds to config key!
  ; build
  :lazy false
  :cljs-namespace [frontend.keybindings]
- :cljs-ns-bindings {'frontend.keybindings 
-                    {'keybindings-init!  frontend.keybindings/keybindings-init! 
-                     'palette-show  frontend.keybindings/palette-show}}}
+ :cljs-ns-bindings {'frontend.keybindings  {'keybindings-init!  frontend.keybindings/keybindings-init!
+                                            'palette-show  frontend.keybindings/palette-show}}
+ :cljs-service {:config-fn webly.spa.service/cljs-config-simple
+                :start-fn frontend.keybindings/keybindings-init!}}
