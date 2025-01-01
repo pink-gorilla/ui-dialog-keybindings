@@ -8,10 +8,9 @@
                                                             :sha "cc75980b43011773162b485f46f939dc5fba91e4"}}
          :main-opts ["-m" "cognitect.test-runner"]
          :exec-fn cognitect.test-runner.api/test}
-  
-   :build {:deps {io.github.clojure/tools.build {:mvn/version "0.9.6"}
-                 slipset/deps-deploy {:mvn/version "0.2.1"}
-                 babashka/fs {:mvn/version "0.0.5"}}
+
+  :build {:deps {io.github.clojure/tools.build {:mvn/version "0.9.6"}
+                 slipset/deps-deploy {:mvn/version "0.2.1"}}
           :ns-default build}
 
 ;

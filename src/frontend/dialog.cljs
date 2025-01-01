@@ -16,7 +16,7 @@
              {:show? true
               :child child
               :close (or close nil) ; optionally dispatch on close reframe event
-              :size (or size :default)})))
+              :size (or size nil)})))
 
 (reg-event-db
  :modal/close
@@ -27,7 +27,7 @@
              (dispatch close))
            (assoc-in db [:modal] {:show? false
                                   :child nil
-                                  :size :default
+                                  :size nil
                                   :close nil}))
        db))))
 
@@ -39,13 +39,18 @@
                       (dispatch [:modal/close])
                       (.preventDefault event)
                       (.stopPropagation event))}]
-   [:div {:class "modal-child"
-          :style {:width (case size
-                           :extra-small "15%"
-                           :small "30%"
-                           :large "70%"
-                           :extra-large "85%"
-                           "50%")}} child]])
+   (if size
+     ;wrap % size
+     [:div {:class "modal-child"
+            :style {:width (case size
+                             :extra-small "15%"
+                             :small "30%"
+                             :large "70%"
+                             :extra-large "85%"
+                             "50%")}} child]
+     ; just wrap the class we use.
+     [:div {:class "modal-child"}
+      child])])
 
 (reg-sub-raw
  :modal
@@ -60,7 +65,7 @@
 
 (defn dialog-show
   ([ui]
-   (dispatch [:modal/open ui :small]))
+   (dispatch [:modal/open ui]))
   ([ui size]
    (dispatch [:modal/open ui size]))
   ([ui size close]
