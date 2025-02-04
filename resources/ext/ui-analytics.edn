@@ -1,8 +1,8 @@
-{:name "ui-analytics"
+{;:name "ui-analytics"
  ; build
- :lazy false
- :cljs-namespace [frontend.analytics.google-tag]
- :cljs-ns-bindings {'frontend.analytics.google-tag {'frontend.analytics.google-tag frontend.analytics.google-tag/send-event
-                                      }}
+ ;:lazy false
+ ;:cljs-namespace [frontend.analytics.google-tag]
+ ;:cljs-ns-bindings {'frontend.analytics.google-tag {'frontend.analytics.google-tag frontend.analytics.google-tag/send-event}
+ ;                                     }
 
 }
